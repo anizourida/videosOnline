@@ -80,13 +80,13 @@
         
             if(typeof Android != "undefined"){
                 Android.showInterstitial()
-            }else{
-                document.write('Error accured')
             }
             
-            alert("showAd")
-            
         }
+        
+        if(typeof Android == "undefined"){
+               document.write('Error accured')
+            }
 
    </script>
 </body>
