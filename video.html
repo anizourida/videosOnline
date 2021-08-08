@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        video{
+            width: 100%;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" class="hide" inline controls replay src="source.mp4"></video>
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+        var videoSource = getParameterByName("source")
+        video.src = videoSource
+        video.classList.remove("hide")
+    </script>
+</body>
+</html>
