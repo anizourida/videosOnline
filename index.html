@@ -75,7 +75,9 @@
             container.appendChild(videoDom)
         }
         
-        showInterstitial()
+        if(typeof Android != null){
+            Android.showInterstitial()
+        }
 
    </script>
 </body>
