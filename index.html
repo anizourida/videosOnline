@@ -45,6 +45,7 @@
 <body>
     <div class="container" id="videosContainer">
     </div>
+    <button onclick="showAd()">Click ad</button>
     <script>
         var videos = [
             {
@@ -75,8 +76,14 @@
             container.appendChild(videoDom)
         }
         
-        if(typeof Android != "undefined"){
-            Android.showInterstitial()
+        function showAd(){
+        
+            if(typeof Android != "undefined"){
+                Android.showInterstitial()
+            }else{
+                document.write('Error accured')
+            }
+            
         }
 
    </script>
