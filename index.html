@@ -44,8 +44,8 @@
 
 <body>
     <div class="container" id="videosContainer">
+        <center>No videos</center>
     </div>
-    <button onclick="showAd()">Click ad</button>
     <script>
         var videos = [
             {
@@ -59,6 +59,7 @@
                 "source": "cat-compilation.mp4"
             }
         ];
+        videos = [];
         var container = document.getElementById("videosContainer")
         for(var i=0 ; i < videos.length; i++){
             var video = videos[i];
